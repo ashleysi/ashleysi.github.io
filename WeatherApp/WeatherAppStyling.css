@@ -1,0 +1,68 @@
+/*select all of our tags globally*/
+h1,h2,h3,span{
+  /*bring text closer to each other*/
+  margin: 0;
+}
+
+h1{
+  /*rem = relative to browsers default size. AKA we will gow and shrink 16x with you*/
+  font-size: 16rem;
+}
+
+h2{
+  /*rem = relative to browsers default size. AKA we will gow and shrink 16x with you*/
+  font-size: 3rem;
+}
+
+h3{
+  /*rem = relative to browsers default size. AKA we will gow and shrink 16x with you*/
+  font-size: 1.4rem;
+}
+
+/* the degree symbol span*/
+span{
+  font-size: 6rem;
+}
+
+.container{
+  background-color: lightblue;
+  /* Max width so if you're on a cell phone, it will "shrink down" and not bleed off the screen */
+  max-width: 550px;
+  
+  /*vh = viewport height. Your viewport is what you can see on the screen. So take 100% of YOUR viewport's height. */
+  height: 100vh;
+  
+  /*make the actual border*/
+  border: 1px solid black;
+  
+  /*Put the border in the center. Use auto so it automatically finds the middle*/
+  margin: 0 auto;
+  
+  /* Says hey, I'm using the grid method of laying this out */
+  display:grid;
+  
+  /*top row 20%. bottom row 80%. Go up and down the page*/
+  grid-template-rows: 20%, 80%;
+  
+  /*Center all the text*/
+  text-align: center;
+  
+  /* keep contenxt 25px away from top and botoom. 5px from left and right sides*/ 
+  padding: 25px 5px;
+}
+
+/*go inside degrees container which holds the temp # and degree symbol*/
+.degrees{
+  display: grid;
+  
+  /*go left/right accross the page. Auto auto will automatically put everything in the columns but they won't be close to each other.*/
+  grid-template-columns: auto auto;
+  
+  /*fix that by putting everythign in the center. With this, now the degree and the degree symbol are next to each other */
+  justify-content: center;
+  
+  /* center the degree and degree symbol just a little more for aestetic purposes */
+  margin-left: 2rem;
+  
+  
+}
