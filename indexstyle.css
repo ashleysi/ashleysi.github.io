@@ -1,0 +1,221 @@
+h2,h3 {
+  text-decoration: underline;
+}
+
+.summary{
+	text-decoration: none;
+}
+
+.topnav {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #1e90ff;
+}
+
+/* ---------- Global Styles ----------*/
+html{
+	box-sizing:border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body{
+	color: #343434;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size:16px;
+	line-height:1.5;
+}
+
+img{
+	width: 300px;
+}
+
+<!-- link color -->
+a { 
+	color:#FFE66D;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+h1{
+	font-size: 100px;
+	line-height: 1;
+}
+
+h2{
+	font-size: 45px;
+}
+
+h1,h2{
+	font-family: 'Caveat', cursive;
+	font-size: 400;
+}
+
+.content-wrap{
+	/*max-width will keep eveything on the page regardless of size*/
+	max-width: 800px;
+	/* keep content at 85% of tab size so the words don't go to the corner. leave some space!*/
+	width: 85%;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+/*remove space fromleft column of education and work experience*/
+h3{
+	margin-bottom: 0;
+}
+
+/*To select the paragraph immediately after the h3 heading, we'll use the adjacent sibling combinator. The selector will be h3 plus p, which will match to only the first paragraph that comes right after h3.*/
+.item-details h3 + p{
+	font-style: italic;
+}
+
+/*item-details are classes added to work and education sections only in the html. not projects */
+/*remove space*/
+.item-details h3 ~ p{
+	margin: 0;
+}
+/* add the child element section separated by the greater than symbol between the two selectors. This will ensure that only the section child elements within the divider element will be selected.*/
+.divider > section{ 
+	border-bottom: 1px dashed #343434; /*dashed line border*/
+	padding: 25px 0; /*left and right 25 padding. 0 for top and bottom*/
+}
+.divider > section:last-of-type{
+	border-bottom:none;
+}
+
+/* ---------- Profile ----------*/
+header{
+	background: #957DAD;
+	color: #F7FFF7;
+}
+
+/* ---------- Projects ----------*/
+.projects{
+	background: #D291BC;
+}
+
+.projects a{
+	color: #2F3061;
+}
+
+.projects .btn{
+	color: #F7FFF7;
+	background: #2F3061;
+	text-decoration: none;
+	padding: 8px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.projects .btn:hover{
+	background: rgba(47, 48, 97, 80%);
+}
+
+.project-item{
+	overflow: hidden;
+}
+
+.project-item h3{
+	margin-top:0; /*remove extra space so the header and image top at at the same level */
+}
+
+
+/* ---------- Certifications ----------*/
+figcaption {
+  display: block;
+}
+.education{
+	background: #E0BBE4;
+}
+
+/* ---------- Contact Information ----------*/
+footer{
+	background: #FFDFD3;
+}
+
+<!-- target links in this section -->
+.contact a{
+}
+
+.contact .btn{
+	color: white;
+	background: gray;
+	text-decoration: none;
+	padding: 8px;
+	margin: 25px;
+	display:inline-block;
+	border-radius: 4px; 
+	display: inline-block;
+}
+.contact .btn:hover{
+	background: rgba(47, 48, 97, 80%);
+}
+
+.contact-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+/*
+.contact-list a{
+	padding: 50px;
+	display: inline-block;
+}
+*/
+
+/* ---------- Responsive ----------*/
+@media screen and (min-width:750px){  /*media type and media feature are used together here*/
+	/*once the page is too small it will be left-align. WHen large then keep it as center*/
+	header, footer {
+		text-align: center;
+	}
+	
+	/*float will only apply for view ports that area 750 pixels or larger.
+	AKA at 750 pixels or less, stack the images and text on top of each other, rather than side by side*/
+	.project-item img { /*decendant selector to just grab image*/
+		float: left;
+		margin-right: 20px; /*space between img and text*/
+	}
+	
+	.job-item{
+	display: grid;
+	grid-template-columns: 1fr 2fr; /*make 2 column sizes*/
+	column-gap: 20px; /*have a gap between columns*/
+	}
+	
+	/*stack contact on top of each other when screen is too small*/
+	.contact-list{
+	display: flex; /*align horizontally*/
+	/*justify-content:space-between;*//*distibute across page evenly*/
+	justify-content: center;
+	}
+}
+
+/*make it 749 just so it doesn't conflict with 750 above*/
+@media screen and (max-width:749px){
+	/*once screen is less than 749 pixels wide, change font size of header*/
+	h1{
+		font-size: 75px;
+		line-height: 0.9;
+		/*add space between name and summary headers*/
+		margin-bottom:20px;
+	}
+	
+	/*remove space h2 when the text flows onto two lines (when page is smaller)*/
+	h2{
+		line-height: 1;
+	}
+	
+	/*put the contact buttons closer to each other when the screen is smaller*/
+	.contact .btn{
+		margin: 5px;
+	}
+}
