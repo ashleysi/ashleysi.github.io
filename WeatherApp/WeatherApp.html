@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="WeatherAppJavaScript.js"></script>
 <link rel="stylesheet" type="text/css" href="WeatherAppStyling.css" media="screen" />
 </head>
 <link
@@ -10,20 +12,21 @@
 	<div class="container">
 
 		<!-- city -->
-		<h2 id="city">New York City</h2>
+		<h2 id="city"></h2>
 
 		<!-- Middle section of the screen-->
 		<div class="middle">
 
 		  <!-- Add an image -->
 		  
-		  <img src="sunshine.png" alt="icon" id="icon" style= "width:100px; height:100px;">
+		  <!-- <img src="sunshine.png" alt="icon" id="icon" style= "width:100px; height:100px;"> -->
+		  <img src="" alt="icon" id="icon">
 		  
 		  <!-- Will have # and the degree symbol-->
 		  <div class="degrees">
 		  
 			<!--degree #-->
-			<h1 id="temp">19</h1>
+			<h1 id="temp"></h1>
 			
 			<!-- degree symbol-->
 			<span>&#176;</span>
@@ -32,7 +35,7 @@
 		   </div>
 		   
 		  <!-- weather description-->
-		  <h3 id="desc">Sunny but chilly</h3>
+		  <h3 id="desc"></h3>
 		  
 		<!-- end of middle div-->
 		</div>
