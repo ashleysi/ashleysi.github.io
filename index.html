@@ -6,11 +6,25 @@
     <title>Ashley Simons</title>
 	<link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:400,600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="indexstyle.css">
+	<link rel="stylesheet" href="navigationBar.css" />
   </head>
   <body>
   
     <main>
-<!--	<div class="box sticky">sticky</div> -->
+		<ul id="navBar">
+   <!-- Projects-->
+   <li>
+    <a href="#projectsSection">Projects</a>
+   </li>
+   <!-- Add link to search  here-->
+   <li>
+    <a href="#LinkedInLearningSection">LinkedIn Learning Certificates</a>
+   </li>
+   <li>
+    <a href="#contactSection">Contact</a>
+   </li>
+  </ul>
+  
       <!-- ***********************  ABOUT / PROFILE  *********************** -->
       <header>
 		<div class="content-wrap";>
@@ -22,7 +36,7 @@
       <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
       <section class="projects">
 	  <div class="content-wrap divider">
-        <h2>Projects</h2>
+        <h2 id="projectsSection">Projects</h2>
         <p>Projects from CSCI355 </p>
 
         <! Resume -->
@@ -74,7 +88,7 @@
       <!-- ****************** CERTIFICATIONS ****************** -->
       <section class="education">
 		 <div class="content-wrap item-details" >
-			<h2>Linkedin Learning Certificates</h2>
+			<h2 id="LinkedInLearningSection">Linkedin Learning Certificates</h2>
 
 			  <figure>
 			  <img src="HomepagePhotos/LLC1.png" alt="LLC" style="width:100%">
@@ -126,7 +140,7 @@
       <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
       <footer class="contact">
 	  <div class="content-wrap";>
-			<h2>Let's Keep in Touch!</h2>
+			<h2 id="contactSection">Let's Keep in Touch!</h2>
 
 			<!-- Social media and contact links. Add or remove any networks. -->
 			<ul class="contact-list">

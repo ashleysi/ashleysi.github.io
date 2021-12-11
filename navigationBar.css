@@ -1,0 +1,50 @@
+/*
+  Name: Ashley Simons 
+  Navigator Bar at the top of the page
+  This is the same code from the navigation bar that I made for our Chalkboard project
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+/* * selects every element on the page*/
+*{ 
+  font-family: "Open Sans";
+}
+
+navigationBarBody {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+}
+
+#icon {
+  float: left;
+  position: relative;
+  top:-15px;
+}
+
+#navBar {
+  background-color: #006A80;
+  text-align: center;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 10%;
+}
+
+#navBar li {
+  display: inline-block;
+  padding: 20px 0px 20px 20px;
+  font-size: 1.5em;
+}
+
+#navBar a{
+  color: #865BE4;
+  /*Put none so the underline*/
+  text-decoration: none;
+}
+
+#navBar a:hover{
+  color: #2F1833;
+}
